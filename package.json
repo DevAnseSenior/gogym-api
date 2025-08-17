@@ -1,0 +1,34 @@
+{
+  "name": "gogym-api",
+  "version": "1.0.0",
+  "description": "Application for registration and check-in at gyms",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevAnseSenior/gogym-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevAnseSenior/gogym-api/issues"
+  },
+  "homepage": "https://github.com/DevAnseSenior/gogym-api#readme",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "2.2.2",
+    "@types/node": "24.3.0",
+    "tsup": "8.5.0",
+    "tsx": "4.20.4",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "dotenv": "17.2.1",
+    "fastify": "5.5.0",
+    "zod": "4.0.17"
+  }
+}
