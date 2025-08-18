@@ -49,6 +49,7 @@ go-gym/
     ```bash
     NODE_ENV="your_env" ("dev", "test", "production")
     PORT=3333
+    DATABASE_URL=
    ```
    
 4. **Run the application**:
