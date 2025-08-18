@@ -53,7 +53,8 @@ go-gym/
    
 4. **Run the application**:
     ```bash
-    npm run start:dev
+    docker compose up -d # Start the services
+    npx prisma migrate dev # Execute migrations
     ```
 
 ## 📌 Endpoints (Example)
