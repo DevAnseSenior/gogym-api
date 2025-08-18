@@ -15,20 +15,26 @@ GoGym is a modern and efficient gym check-in management application built with *
 - **Fastify** (Web Framework)
 - **Zod** (Schema Validation)
 - **dotenv** (Environment Variables)
+- **Prisma** (Serverless architecture ORM)
 
 ## 📂 Project Structure
 ```bash
 go-gym/
+├── prisma/
+│ ├── migrations # stored migration history
+│ └── schema.prisma # Database tables schemas
 ├── src/
 │ ├── app.ts # Fastify app setup
-│ ├── server.ts # Server setup confi
+│ ├── server.ts # Server setup config
 │ └── env/
-│    └──index.ts # Enviroment validation
+│    └──index.ts # Enviroment vars validation
 ├── env.example # Enviroment variables example
-├── .eslintrc.json
-├── .npmrc
+├── .eslintrc.json # ESLint Config
+├── .npmrc # NPM config libs control
+├── docker-compose.yml
 ├── LICENSE
 ├── package.json
+├── tsconfig.json
 └── README.md
 ```
 
@@ -56,6 +62,7 @@ go-gym/
     ```bash
     docker compose up -d # Start the services
     npx prisma migrate dev # Execute migrations
+    npm run start:dev # Run application on development 
     ```
 
 ## 📌 Endpoints (Example)
