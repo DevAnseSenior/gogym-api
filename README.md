@@ -24,10 +24,16 @@ go-gym/
 │ ├── migrations # stored migration history
 │ └── schema.prisma # Database tables schemas
 ├── src/
+│ ├── env/
+│ │ └──index.ts # Enviroment vars validation
+│ ├── http/
+│ │ ├── controllers/
+│ │ │ └──register.ts # User business rules
+│ │ └── routes.ts # application endpoints
+│ ├── lib/
+│ │ └──prisma.ts # Prisma client config
 │ ├── app.ts # Fastify app setup
-│ ├── server.ts # Server setup config
-│ └── env/
-│    └──index.ts # Enviroment vars validation
+│ └── server.ts # Server setup config
 ├── env.example # Enviroment variables example
 ├── .eslintrc.json # ESLint Config
 ├── .npmrc # NPM config libs control
@@ -62,7 +68,7 @@ go-gym/
     ```bash
     docker compose up -d # Start the services
     npx prisma migrate dev # Execute migrations
-    npm run start:dev # Run application on development 
+    npm run start:dev # Run application on development mode
     ```
 
 ## 📌 Endpoints (Example)
