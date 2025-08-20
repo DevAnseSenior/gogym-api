@@ -25,13 +25,15 @@ go-gym-api/
 │ └── schema.prisma # Database tables schemas
 ├── src/
 │ ├── env/
-│ │ └──index.ts # Enviroment vars validation
+│ │ └── index.ts # Enviroment vars validation
 │ ├── http/
 │ │ ├── controllers/ # Handler of request response
 │ │ └── routes.ts # application endpoints
 │ ├── lib/
-│ │ └──prisma.ts # Prisma client config
+│ │ └── prisma.ts # Prisma client config
 │ ├── repositories/ # Layer for database manipulation tools
+│ │ ├── prisma/
+│ │ └── users-repository.ts # Users Interface
 │ ├── use-cases/ # Use case layer for specific entities
 │ ├── app.ts # Fastify app setup
 │ └── server.ts # Server setup config
