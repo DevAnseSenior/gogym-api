@@ -19,7 +19,7 @@ GoGym is a modern and efficient gym check-in management application built with *
 
 ## 📂 Project Structure
 ```bash
-go-gym/
+go-gym-api/
 ├── prisma/
 │ ├── migrations # stored migration history
 │ └── schema.prisma # Database tables schemas
