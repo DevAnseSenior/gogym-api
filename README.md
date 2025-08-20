@@ -31,6 +31,7 @@ go-gym/
 │ │ └── routes.ts # application endpoints
 │ ├── lib/
 │ │ └──prisma.ts # Prisma client config
+│ ├── repositories/ # Layer for database manipulation tools
 │ ├── use-cases/ # Use case layer for specific entities
 │ ├── app.ts # Fastify app setup
 │ └── server.ts # Server setup config
