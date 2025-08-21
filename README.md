@@ -35,6 +35,7 @@ go-gym-api/
 │ │ ├── prisma/
 │ │ └── users-repository.ts # Users Interface
 │ ├── use-cases/ # Use case layer for specific entities
+│ │ └── errors/ # Use case error messages
 │ ├── app.ts # Fastify app setup
 │ └── server.ts # Server setup config
 ├── env.example # Enviroment variables example
