@@ -15,20 +15,37 @@ GoGym is a modern and efficient gym check-in management application built with *
 - **Fastify** (Web Framework)
 - **Zod** (Schema Validation)
 - **dotenv** (Environment Variables)
+- **Prisma** (Serverless architecture ORM)
 
 ## 📂 Project Structure
 ```bash
-go-gym/
+go-gym-api/
+├── prisma/
+│ ├── migrations # stored migration history
+│ └── schema.prisma # Database tables schemas
 ├── src/
+│ ├── env/
+│ │ └── index.ts # Enviroment vars validation
+│ ├── http/
+│ │ ├── controllers/ # Handler of request response
+│ │ └── routes.ts # application endpoints
+│ ├── lib/
+│ │ └── prisma.ts # Prisma client config
+│ ├── repositories/ # Layer for database manipulation tools
+│ │ ├── prisma/
+│ │ └── users-repository.ts # Users Interface
+│ ├── use-cases/ # Use case layer for specific entities
+│ │ └── errors/ # Use case error messages
 │ ├── app.ts # Fastify app setup
-│ ├── server.ts # Server setup confi
-│ └── env/
-│    └──index.ts # Enviroment validation
+│ └── server.ts # Server setup config
 ├── env.example # Enviroment variables example
-├── .eslintrc.json
-├── .npmrc
+├── .eslintrc.json # ESLint Config
+├── .npmrc # NPM config libs control
+├── docker-compose.yml
 ├── LICENSE
 ├── package.json
+├── tsconfig.json
+├── vite.config.ts # Unit test config file
 └── README.md
 ```
 
@@ -56,6 +73,7 @@ go-gym/
     ```bash
     docker compose up -d # Start the services
     npx prisma migrate dev # Execute migrations
+    npm run start:dev # Run application on development mode
     ```
 
 ## 📌 Endpoints (Example)
