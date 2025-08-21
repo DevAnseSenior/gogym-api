@@ -45,6 +45,7 @@ go-gym-api/
 ├── LICENSE
 ├── package.json
 ├── tsconfig.json
+├── vite.config.ts # Unit test config file
 └── README.md
 ```
 
