@@ -6,6 +6,7 @@ GoGym is a modern and efficient gym check-in management application built with *
 
 ## 🚀 Features
 
+- **User Register**: Members can be registered on application.
 - **User Check-in**: Members can check in to gyms quickly and securely.
 - **Gym Management**: Owners can manage gym locations, memberships, and check-ins.
 
@@ -16,6 +17,8 @@ GoGym is a modern and efficient gym check-in management application built with *
 - **Zod** (Schema Validation)
 - **dotenv** (Environment Variables)
 - **Prisma** (Serverless architecture ORM)
+- **BCryptjs** (Hashing lib for passwords)
+- **Vitest** (Unit tests enviroment)
 
 ## 📂 Project Structure
 ```bash
@@ -36,6 +39,7 @@ go-gym-api/
 │ │ ├── prisma/
 │ │ └── users-repository.ts # Users Interface
 │ ├── use-cases/ # Use case layer for specific entities
+│ │ ├── factories/ # Use case factories for instances
 │ │ └── errors/ # Use case error messages
 │ ├── app.ts # Fastify app setup
 │ └── server.ts # Server setup config
@@ -76,10 +80,20 @@ go-gym-api/
     npx prisma migrate dev # Execute migrations
     npm run start:dev # Run application on development mode
     ```
+   
+5. **Run tests**:
+    ```bash
+    docker compose up -d # Start the services
+    npm run test # Run the tests suit
+    npm run test:watch # Run the tests on watch mode
+    npm run test:coverage # Verify the tests coverage (open index.html from dir coverage/)
+    npm run test:ui # Execute the test client of vitest
+    ```
 
 ## 📌 Endpoints (Example)
-### Example
-- POST /test-endpoint → Test test test.
+### Users
+- POST /users → Register new user.
+- POST /sessions → Authenticate (login).
 
 ## 📄 License
 This project is licensed under MIT [License](./LICENSE).
