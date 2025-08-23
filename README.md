@@ -17,7 +17,6 @@ GoGym is a modern and efficient gym check-in management application built with *
 - **Zod** (Schema Validation)
 - **dotenv** (Environment Variables)
 - **Prisma** (Serverless architecture ORM)
-- **Prisma** (Serverless architecture ORM)
 - **BCryptjs** (Hashing lib for passwords)
 - **Vitest** (Unit tests enviroment)
 
@@ -40,6 +39,7 @@ go-gym-api/
 │ │ ├── prisma/
 │ │ └── users-repository.ts # Users Interface
 │ ├── use-cases/ # Use case layer for specific entities
+│ │ ├── factories/ # Use case factories for instances
 │ │ └── errors/ # Use case error messages
 │ ├── app.ts # Fastify app setup
 │ └── server.ts # Server setup config
