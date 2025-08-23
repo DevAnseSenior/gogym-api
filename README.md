@@ -81,7 +81,7 @@ go-gym-api/
     npm run start:dev # Run application on development mode
     ```
    
-5. **Run the tests**:
+5. **Run tests**:
     ```bash
     docker compose up -d # Start the services
     npm run test # Run the tests suit
