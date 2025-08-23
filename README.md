@@ -32,6 +32,7 @@ go-gym-api/
 │ ├── lib/
 │ │ └── prisma.ts # Prisma client config
 │ ├── repositories/ # Layer for database manipulation tools
+│ │ ├── in-memory/
 │ │ ├── prisma/
 │ │ └── users-repository.ts # Users Interface
 │ ├── use-cases/ # Use case layer for specific entities
