@@ -37,6 +37,7 @@ go-gym-api/
 │ ├── repositories/ # Layer for database manipulation tools
 │ │ ├── in-memory/
 │ │ ├── prisma/
+│ │ ├── check-ins-repository.ts # Check-ins Interface
 │ │ └── users-repository.ts # Users Interface
 │ ├── use-cases/ # Use case layer for specific entities
 │ │ ├── factories/ # Use case factories for instances
