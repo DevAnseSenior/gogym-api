@@ -42,6 +42,7 @@ go-gym-api/
 │ ├── use-cases/ # Use case layer for specific entities
 │ │ ├── factories/ # Use case factories for instances
 │ │ └── errors/ # Use case error messages
+│ ├── utils/ # Application utility functions
 │ ├── app.ts # Fastify app setup
 │ └── server.ts # Server setup config
 ├── env.example # Enviroment variables example
