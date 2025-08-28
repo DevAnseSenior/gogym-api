@@ -37,10 +37,12 @@ go-gym-api/
 │ ├── repositories/ # Layer for database manipulation tools
 │ │ ├── in-memory/
 │ │ ├── prisma/
+│ │ ├── check-ins-repository.ts # Check-ins Interface
 │ │ └── users-repository.ts # Users Interface
 │ ├── use-cases/ # Use case layer for specific entities
 │ │ ├── factories/ # Use case factories for instances
 │ │ └── errors/ # Use case error messages
+│ ├── utils/ # Application utility functions
 │ ├── app.ts # Fastify app setup
 │ └── server.ts # Server setup config
 ├── env.example # Enviroment variables example
