@@ -3,13 +3,13 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   build: {
-    sourcemap: false, // não gera nem tenta usar sourcemaps
+    sourcemap: false,
   },
   optimizeDeps: {
-    exclude: ['@prisma/client'], // evita conflitos no bundle
+    exclude: ['@prisma/client'],
   },
   ssr: {
-    noExternal: ['@prisma/client'], // força incluir corretamente no SSR
+    noExternal: ['@prisma/client'],
   },
   plugins: [tsconfigPaths()],
   test: {
