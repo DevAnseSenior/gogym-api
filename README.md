@@ -27,26 +27,30 @@ go-gym-api/
 │ ├── migrations # stored migration history
 │ └── schema.prisma # Database tables schemas
 ├── src/
+│ ├── @types/ # Store globals interfaces on project
 │ ├── env/
 │ │ └── index.ts # Enviroment vars validation
 │ ├── http/
 │ │ ├── controllers/ # Handler of request response
-│ │ └── routes.ts # application endpoints
+│ │ └── middlewares # Functions to interact between controllers and endpoints
 │ ├── lib/
 │ │ └── prisma.ts # Prisma client config
 │ ├── repositories/ # Layer for database manipulation tools
 │ │ ├── in-memory/
 │ │ ├── prisma/
 │ │ ├── check-ins-repository.ts # Check-ins Interface
+│ │ ├── gyms-repository.ts # Check-ins Interface
 │ │ └── users-repository.ts # Users Interface
-│ ├── use-cases/ # Use case layer for specific entities
-│ │ ├── factories/ # Use case factories for instances
-│ │ └── errors/ # Use case error messages
+│ ├── use-cases/ # Use cases layer for entities
+│ │ ├── errors/ # Use case error messages
+│ │ └── factories/ # Use case factories for instances
 │ ├── utils/ # Application utility functions
+│ │ └── test/ # Utility functions for tests
 │ ├── app.ts # Fastify app setup
 │ └── server.ts # Server setup config
 ├── env.example # Enviroment variables example
 ├── .eslintrc.json # ESLint Config
+├── .gitignore
 ├── .npmrc # NPM config libs control
 ├── docker-compose.yml
 ├── LICENSE
@@ -86,7 +90,8 @@ go-gym-api/
 5. **Run tests**:
     ```bash
     docker compose up -d # Start the services
-    npm run test # Run the tests suit
+    npm run test # Run the unit tests suits
+    npm run test:e2e # Run the tests e2e suits
     npm run test:watch # Run the tests on watch mode
     npm run test:coverage # Verify the tests coverage (open index.html from dir coverage/)
     npm run test:ui # Execute the test client of vitest
@@ -96,6 +101,18 @@ go-gym-api/
 ### Users
 - POST /users → Register new user.
 - POST /sessions → Authenticate (login).
+- GET /me → Get logged user info.
+
+### Gyms
+- POST /gyms → Create a new gym.
+- GET /gyms/search → Search gym by title.
+- GET /gyms/nearby → Search nearby user localization gyms.
+
+### Check-ins
+- POST /gyms/:gymId/check-ins → Check-in.
+- PATCH /check-ins/:checkInId/validate → Gym validations check-in.
+- GET /check-ins/history → Get check-ins history.
+- GET /check-ins/metrics → Get check-ins count of logged user.
 
 ## 📄 License
 This project is licensed under MIT [License](./LICENSE).
