@@ -1,5 +1,6 @@
 {
   "name": "gogym-api",
+  "type": "module",
   "version": "1.0.0",
   "description": "Application for registration and check-in at gyms",
   "main": "index.js",
