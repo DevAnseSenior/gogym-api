@@ -86,6 +86,8 @@ go-gym-api/
     npx prisma migrate dev # Execute migrations
     npm run start:dev # Run application on development mode
     ```
+
+    The API will be available at http://localhost:3333
    
 5. **Run tests**:
     ```bash
